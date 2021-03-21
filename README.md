@@ -1,4 +1,4 @@
-<h2>[RU]</h2>
+<h3>[RU]</h3>
 Игра "Крестики-нолики".
 Сделано с помощью <strong>React.JS</strong>.
 -> <a href="https://yuristy.github.io/tic-tac-toe/"> Ссылка на проект </a> <-
@@ -11,7 +11,7 @@
 <li>При создании новой игры удаляет историю предыдущих ходов.</li>
 </ol>
 
-</h2>[ENG]</h2>
+</h3>[ENG]</h3>
 <h4>Description:</h4>
 Tic-Tac-Toe game with time machine function.
 Created using <strong>React.JS</strong>.

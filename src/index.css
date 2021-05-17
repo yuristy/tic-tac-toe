@@ -1,11 +1,15 @@
 body {
-  font: 14px 'Century Gothic', Futura, sans-serif;
-  margin: 20px;
+  font: 2rem 'Century Gothic', Futura, sans-serif;
+  background-color: rgb(240, 255, 250);
 }
 
 ol,
 ul {
-  padding-left: 30px;
+  padding-left: 20px;
+}
+
+li {
+  margin: 0 0;
 }
 
 .board-row:after {
@@ -15,37 +19,163 @@ ul {
 }
 
 .status {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  font: 2rem 'Century Gothic', Futura, sans-serif;
+  width: max-content;
+}
+
+.next-move {
+  width: 300px;
 }
 
 .square {
   background: #fff;
-  border: 1px solid #999;
+  border: 2px solid #999;
   float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  font-size: 100px;
+  font-weight: 500;
+  line-height: 100px;
+  height: 150px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 150px;
 }
 
 .square:focus {
   outline: none;
 }
 
+.square:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
 .kbd-navigation .square:focus {
-  background: #ddd;
+  background: #eee;
 }
 
 .game {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-info {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 20px;
+  padding: 0 20px;
+  height: 80vh;
+  width: max-content;
+}
+
+button:not(.square) {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 5px;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  cursor: pointer;
+  border-radius: 4px;
+  }
+  button:hover{
+  background-color: #eee;
+  cursor: pointer;
+  }
+  
+@media only screen and (min-width: 0px) and (max-width: 380px)  {
+  .game {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .square {
+    font-size: 60px;
+    height: 80px;
+    width: 80px;
+  }
+
+  body {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  .game-info {
+    margin-left: 0;
+    }
+
+}
+
+@media only screen and (min-width: 381px) and (max-width: 767px)  {
+  .game {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .game-info {
+    margin-top: 50px;
+    width: 50vw;
+    height: 20vh;
+  }
+
+  .square {
+    font-size: 80px;
+    height: 100px;
+    width: 100px;
+  }
+
+  body {
+    font-size: 1.7rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+
+  .game-info {
+    margin-left: 0;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+
+  .square {
+    font-size: 100px;
+    height: 130px;
+    width: 130px;
+  }
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  .game-info {
   margin-left: 20px;
+  }
+
 }
